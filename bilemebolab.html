@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilembo Lab - Craies écoresponsables</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 300px;
+      margin-right: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .chat-button, .whatsapp-button, .download-button {
+      position: fixed;
+      right: 1.5rem;
+      padding: 0.75rem 1rem;
+      border-radius: 9999px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+      cursor: pointer;
+    }
+    .chat-button {
+      bottom: 1.5rem;
+      background-color: #e3342f;
+    }
+    .whatsapp-button {
+      bottom: 5rem;
+      background-color: #25D366;
+    }
+    .download-button {
+      bottom: 8.5rem;
+      background-color: #4A5568;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-800 text-yellow-300">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div
+  class="w-44 mx-auto cursor-pointer transform transition-transform duration-300 hover:scale-110"
+  aria-label="Logo Group Bilembo"
+>
+  <svg
+    width="80"
+    height="80"
+    viewBox="0 0 180 180"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+  >
+    <!-- Cercle violet foncé -->
+    <circle cx="90" cy="90" r="90" fill="#5B3E99" />
+
+    <!-- Craie bleu clair -->
+    <rect
+      id="chalkBlue"
+      x="75"
+      y="45"
+      width="15"
+      height="70"
+      rx="5"
+      fill="#4A90E2"
+      transform="rotate(-15 75 45)"
+      class="transition-colors duration-300"
+    />
+    <!-- Craie jaune -->
+    <rect
+      id="chalkYellow"
+      x="90"
+      y="50"
+      width="15"
+      height="55"
+      rx="5"
+      fill="#F5C700"
+      transform="rotate(-15 90 50)"
+      class="transition-colors duration-300"
+    />
+
+    <!-- Texte blanc centré -->
+    <text
+      x="90"
+      y="150"
+      fill="white"
+      font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+      font-size="16"
+      font-weight="700"
+      text-anchor="middle"
+    >
+      Group Bilembo
+    </text>
+  </svg>
+</div>
+      <nav class="space-x-4">
+        <a href="#about" class="hover:underline">À propos |</a>
+        <a href="#products" class="hover:underline">Nos produits |</a>
+        <a href="#process" class="hover:underline">Fabrication |</a>
+        <a href="#order" class="hover:underline">Commander |</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-yellow-100 py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4 text-blue-900">Des craies locales pour l'éducation durable</h2>
+    <p class="text-lg text-gray-700 max-w-xl mx-auto">Nous fabriquons et distribuons des craies écologiques adaptées aux besoins des écoles et centres éducatifs de la RDC.</p>
+  </section>
+
+  <!-- À propos -->
+  <section id="about" class="py-16 max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-semibold mb-4 text-blue-800">À propos de nous</h3>
+    <p class="text-gray-700 leading-relaxed">Bilembo Lab est une entreprise congolaise spécialisée dans la fabrication artisanale de craies respectueuses de l’environnement. Nous visons à renforcer l’éducation de base à travers des produits fiables, propres et abordables, tout en créant de l’emploi local.</p>
+  </section>
+
+  <!-- Produits -->
+  <section id="products" class="py-16 bg-yellow-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-8 text-blue-800">Nos produits</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Craies blanches</h4>
+          <p class="text-gray-600">Parfaites pour les tableaux noirs scolaires, sans poussière excessive.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Craies de couleur</h4>
+          <p class="text-gray-600">Idéales pour la créativité, les présentations et les dessins.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Packs personnalisés</h4>
+          <p class="text-gray-600">Disponibles en gros pour les écoles et ONG.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fabrication -->
+  <section id="process" class="py-16 max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-semibold mb-4 text-blue-800">Notre processus de fabrication</h3>
+    <p class="text-gray-700 leading-relaxed">Nous utilisons des matériaux locaux et un procédé semi-artisanal respectueux de l’environnement. Chaque craie est vérifiée manuellement pour garantir la qualité. Nous formons également des jeunes à la production et la logistique.</p>
+  </section>
+
+  <!-- Carousel -->
+  <section id="carousel" class="py-16 bg-yellow-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6 text-center text-blue-800">Témoignages d'écoles partenaires</h3>
+      <div class="carousel overflow-hidden">
+        <div class="carousel-track">
+          <div class="carousel-item">"Grâce à Bilembo, nos élèves ont enfin des craies fiables !" - École Lumière</div>
+          <div class="carousel-item">"Un vrai soulagement pour nos professeurs." - Institut Mavuno</div>
+          <div class="carousel-item">"Des craies durables et sans poussière, bravo !" - Collège Kitoko</div>
+          <div class="carousel-item">"Nous soutenons la production locale avec fierté." - Lycée Congo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commander -->
+  <section id="order" class="py-16 max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-semibold mb-6 text-blue-800">Vérifiez le stock et commandez</h3>
+    <form class="bg-gray-100 p-6 rounded shadow space-y-4" onsubmit="event.preventDefault(); alert('Merci pour votre commande !')">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Effectif souhaité</label>
+        <input type="number" id="quantity" class="w-full p-2 rounded border" placeholder="Nombre d'élèves" required oninput="calculatePrice()">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Prix total ($)</label>
+        <input type="text" id="totalPrice" class="w-full p-2 rounded border bg-gray-200" readonly>
+      </div>
+      <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800">Commander</button>
+    </form>
+    <p class="mt-4 text-sm text-gray-600">Mode de paiement : Visa, Orange Money, M-Pesa et plus.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-blue-900 text-yellow-100 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">Contactez-nous</h3>
+      <form class="space-y-4" onsubmit="event.preventDefault(); alert('Merci pour votre message !')">
+        <input type="text" placeholder="Nom" class="w-full p-2 rounded text-black" required>
+        <input type="email" placeholder="Email" class="w-full p-2 rounded text-black" required>
+        <textarea placeholder="Message" class="w-full p-2 rounded text-black" rows="4" required></textarea>
+        <button class="bg-yellow-300 text-blue-900 font-bold px-6 py-2 rounded hover:bg-yellow-400">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 Bilembo Lab. Tous droits réservés.</p>
+    <p>Adresse : Ngaliema, Kinshasa | Téléphone : <a href="tel:+243838451285" class="underline">+243 838 451 285</a> | Email : <a href="mailto:robertmafuta2@gmail.com" class="underline">robertmafuta2@gmail.com</a></p>
+  </footer>
+
+  <!-- Action Buttons -->
+  <div class="chat-button" onclick="alert('Un assistant vous répondra bientôt !')">
+    💬 Assistance
+  </div>
+  <a href="https://wa.me/243838451285" target="_blank" class="whatsapp-button">
+    💬 WhatsApp
+  </a>
+  <a href="fiche_distributeur.pdf" download class="download-button">
+    📄 Devenir distributeur
+  </a>
+
+  <script>
+    function calculatePrice() {
+      const quantity = document.getElementById('quantity').value;
+      const total = quantity * 1;
+      document.getElementById('totalPrice').value = total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
